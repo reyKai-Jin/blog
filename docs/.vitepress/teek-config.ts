@@ -1,6 +1,7 @@
 // 本地 Teek 主题包引用（与 Teek 在线主题包引用 二选一）
 import { defineTeekConfig } from "../../packages/config";
 import { version } from "../../packages/teek/version";
+import { sitePath } from "./base";
 
 // Teek 在线主题包引用（需安装 Teek 在线版本）
 // import { defineTeekConfig } from "vitepress-theme-teek/config";
@@ -15,7 +16,7 @@ export const teekConfig = defineTeekConfig({
   homeCardListPosition: "right",
 
   // 文章默认作者
-  author: { name: "金凯", link: "/about" },
+  author: { name: "金凯", link: sitePath("/about") },
 
   // 首页左侧个人信息卡片
   blogger: {
@@ -113,10 +114,10 @@ export const teekConfig = defineTeekConfig({
     {
       title: "站内导航",
       links: [
-        { name: "技术文章", link: "/tech/html5" },
-        { name: "视频作品", link: "/videos" },
-        { name: "AIGC 作品", link: "/aigc" },
-        { name: "关于我", link: "/about" },
+        { name: "技术文章", link: sitePath("/tech/html5") },
+        { name: "视频作品", link: sitePath("/videos") },
+        { name: "AIGC 作品", link: sitePath("/aigc") },
+        { name: "关于我", link: sitePath("/about") },
       ],
     },
     {

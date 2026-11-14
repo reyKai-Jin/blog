@@ -1,5 +1,6 @@
 import { defineConfig } from "vitepress";
 import { createRewrites } from "vitepress-plugin-permalink";
+import { base, sitePath, siteUrl } from "./base";
 import { teekConfig } from "./teek-config";
 
 const siteName = "金凯";
@@ -10,21 +11,21 @@ const description = [
   "用代码构建界面，用镜头讲述故事，用 AI 扩展想象。",
 ].join(" ");
 
-// TODO: 部署后把下面两处示例域名替换成你自己的域名
-const siteUrl = "https://example.com";
+// 站点地址与 base 见 ./base.ts，GitHub Pages 部署时由 CI 注入
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   extends: teekConfig,
   // 使用永久链接（permalink）作为真实访问路径，直接访问不会 404
   rewrites: createRewrites(),
+  base,
   title: siteTitle,
   description,
   cleanUrls: true,
   lastUpdated: true,
   lang: "zh-CN",
   head: [
-    ["link", { rel: "icon", type: "image/svg+xml", href: "/logo.svg" }],
+    ["link", { rel: "icon", type: "image/svg+xml", href: sitePath("/logo.svg") }],
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:locale", content: "zh-CN" }],
     ["meta", { property: "og:title", content: siteTitle }],
@@ -52,7 +53,8 @@ export default defineConfig({
     },
   },
   sitemap: {
-    hostname: siteUrl,
+    // 项目站点的页面路径不含 base，hostname 需要带上才能生成完整地址
+    hostname: `${siteUrl}${base.replace(/\/$/, "")}`,
     transformItems: items => {
       const permalinkItemBak: typeof items = [];
       // 使用永久链接生成 sitemap
