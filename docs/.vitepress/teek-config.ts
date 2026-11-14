@@ -114,7 +114,6 @@ export const teekConfig = defineTeekConfig({
     {
       title: "站内导航",
       links: [
-        { name: "技术文章", link: sitePath("/tech/html5") },
         { name: "视频作品", link: sitePath("/videos") },
         { name: "AIGC 作品", link: sitePath("/aigc") },
         { name: "关于我", link: sitePath("/about") },
