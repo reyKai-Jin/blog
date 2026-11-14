@@ -80,7 +80,7 @@ export default defineConfig({
     },
     nav: [
       { text: "首页", link: "/" },
-      { text: "技术文章", link: "/tech", activeMatch: "/tech" },
+      { text: "技术文章", link: "/tech/html5", activeMatch: "/tech" },
       { text: "视频作品", link: "/videos", activeMatch: "/videos" },
       { text: "AIGC 作品", link: "/aigc", activeMatch: "/aigc" },
       { text: "关于我", link: "/about", activeMatch: "/about" },

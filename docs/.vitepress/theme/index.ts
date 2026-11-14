@@ -1,5 +1,8 @@
+import type { App } from "vue";
 import Teek from "vitepress-theme-teek";
 import TeekLayoutProvider from "./components/teek-layout-provider.vue";
+import WorkCardList from "./components/work-card-list.vue";
+import FragmentList from "./components/fragment-list.vue";
 
 // Teek 本地主题包引用（与 Teek 在线主题包引用 二选一）
 // 当前引入文件为 scss，需要执行 pnpm add sass，如果不想安装额外依赖，可以直接引入 Teek 已经构建好的 css 文件
@@ -23,4 +26,8 @@ import "./styles/video.scss";
 export default {
   extends: Teek,
   Layout: TeekLayoutProvider,
+  enhanceApp({ app }: { app: App }) {
+    app.component("WorkCardList", WorkCardList);
+    app.component("FragmentList", FragmentList);
+  },
 };

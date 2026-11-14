@@ -113,7 +113,7 @@ export const teekConfig = defineTeekConfig({
     {
       title: "站内导航",
       links: [
-        { name: "技术文章", link: "/tech" },
+        { name: "技术文章", link: "/tech/html5" },
         { name: "视频作品", link: "/videos" },
         { name: "AIGC 作品", link: "/aigc" },
         { name: "关于我", link: "/about" },
