@@ -36,6 +36,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # @teek/helper 与部分插件以 ./dist 为入口，dist 不入库，
+      # 全新检出必须先 stub 出构建产物，否则 VitePress 构建会报 Failed to resolve entry
+      - name: Stub workspace packages
+        run: pnpm stub
+
       # 用户站点（仓库名以 .github.io 结尾）部署在根路径，项目站点在 /仓库名/ 下
       - name: Resolve site path
         id: site
