@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "zhuanz-personal-site",
+  "version": "1.0.0",
+  "description": "庄一帆的个人站：前端、后端、影像与 AIGC",
+  "type": "module",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.4",
+    "vitepress-plugin-permalink": "catalog:",
+    "vitepress-theme-teek": "workspace:*"
+  }
+}

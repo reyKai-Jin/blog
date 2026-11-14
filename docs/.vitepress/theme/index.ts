@@ -1,0 +1,26 @@
+import Teek from "vitepress-theme-teek";
+import TeekLayoutProvider from "./components/teek-layout-provider.vue";
+
+// Teek 本地主题包引用（与 Teek 在线主题包引用 二选一）
+// 当前引入文件为 scss，需要执行 pnpm add sass，如果不想安装额外依赖，可以直接引入 Teek 已经构建好的 css 文件
+import "@teek/theme-chalk/vp-plus/code-block-mobile.scss"; // 移动端代码块样式优化
+import "@teek/theme-chalk/vp-plus/sidebar.scss"; // 侧边栏优化
+import "@teek/theme-chalk/vp-plus/nav.scss"; // 导航栏优化
+import "@teek/theme-chalk/vp-plus/aside.scss"; // 右侧目录栏文字悬停和激活样式
+import "@teek/theme-chalk/vp-plus/doc-h1-gradient.scss"; // 一级标题渐变色
+import "@teek/theme-chalk/vp-plus/table.scss"; // 表格样式调整，去掉单元格之间的线条
+import "@teek/theme-chalk/vp-plus/mark.scss"; // <mark></mark> 样式
+import "@teek/theme-chalk/vp-plus/blockquote.scss"; // > 引用块样式
+import "@teek/theme-chalk/vp-plus/index-rainbow.scss"; // 首页图片彩虹动画
+import "@teek/theme-chalk/tk-plus/banner-desc-gradient.scss"; // 博客风格 Banner 描述渐变样式
+import "@teek/theme-chalk/tk-plus/home-card-hover.scss"; // 首页卡片悬停效果
+import "@teek/theme-chalk/tk-plus/fade-up-animation.scss"; // 首次加载的动画效果
+
+import "./styles/code-bg.scss";
+import "./styles/iframe.scss";
+import "./styles/video.scss";
+
+export default {
+  extends: Teek,
+  Layout: TeekLayoutProvider,
+};
