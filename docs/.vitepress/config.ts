@@ -87,8 +87,7 @@ export default defineConfig({
       { text: "AIGC 作品", link: "/aigc", activeMatch: "/aigc" },
       { text: "关于我", link: "/about", activeMatch: "/about" },
     ],
-    // TODO: 替换成你自己的 GitHub 主页
-    socialLinks: [{ icon: "github", link: "https://github.com/your-github" }],
+    socialLinks: [{ icon: "github", link: "https://github.com/reyKai-Jin" }],
     search: {
       provider: "local",
     },

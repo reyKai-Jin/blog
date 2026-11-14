@@ -123,7 +123,7 @@ export const teekConfig = defineTeekConfig({
     {
       title: "找到我",
       links: [
-        { name: "GitHub", link: "https://github.com/your-github", icon: "icon-github" },
+        { name: "GitHub", link: "https://github.com/reyKai-Jin", icon: "icon-github" },
         { name: "Bilibili", link: "https://space.bilibili.com/your-uid", icon: "icon-bilibili" },
         { name: "邮箱", link: "mailto:hello@example.com", icon: "icon-youjian" },
       ],
@@ -158,7 +158,7 @@ export const teekConfig = defineTeekConfig({
     {
       icon: "icon-github",
       name: "GitHub",
-      link: "https://github.com/your-github",
+      link: "https://github.com/reyKai-Jin",
     },
     {
       icon: "icon-bilibili",
