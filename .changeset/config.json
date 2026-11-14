@@ -9,6 +9,6 @@
   "updateInternalDependencies": "patch",
   "ignore": [
     "@vitepress-theme-teek/build",
-    "vitepress-theme-teek-docs"
+    "jinkai-personal-site-docs"
   ]
 }

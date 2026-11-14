@@ -1,4 +1,4 @@
-# 庄一帆的个人站
+# 金凯的个人站
 
 前端 · 后端 · 拍摄 · 剪辑 · AIGC
 
@@ -17,10 +17,41 @@
 
 ```bash
 pnpm install
-pnpm docs:dev      # 本地开发，默认 http://localhost:5173
+pnpm docs:dev      # 本地开发，监听 0.0.0.0:5173（支持内网访问）
 pnpm docs:build    # 构建到 docs/.vitepress/dist
-pnpm docs:preview  # 预览构建结果
+pnpm docs:preview  # 预览构建结果，监听 0.0.0.0:4173
 ```
+
+### 内网访问
+
+`docs:dev` 与 `docs:preview` 默认绑定 `0.0.0.0`，同一局域网内的手机、平板和其他电脑可以直接访问：
+
+```text
+http://<本机内网 IP>:5173      # 开发模式
+http://<本机内网 IP>:4173      # 预览构建结果
+```
+
+查看本机内网 IP（macOS）：
+
+```bash
+ipconfig getifaddr en0          # Wi-Fi / 以太网
+ifconfig | grep "inet "         # 上一条为空时用这个，找 192.168.x.x / 10.x.x.x
+```
+
+如果只想本机访问，使用 `pnpm --filter jinkai-personal-site-docs dev:local`；端口被占用时可在命令后加 `--port 5174`（root 命令用 `pnpm docs:dev -- --port 5174`）。
+
+> 首次启动时 macOS 可能会弹出防火墙授权，请选择「允许」，否则其他设备无法连接。
+
+### 内网部署构建产物
+
+构建后可用任意静态服务器把 `docs/.vitepress/dist` 发布到内网机器：
+
+```bash
+pnpm docs:build
+python3 -m http.server 8080 --bind 0.0.0.0 --directory docs/.vitepress/dist
+```
+
+然后访问 `http://<服务器内网 IP>:8080`。如果需要部署在子路径（如 `/site/`），在 [config.ts](docs/.vitepress/config.ts) 中设置 `base: "/site/"`。
 
 ## 目录结构
 

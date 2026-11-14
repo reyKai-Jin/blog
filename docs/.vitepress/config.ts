@@ -2,8 +2,8 @@ import { defineConfig } from "vitepress";
 import { createRewrites } from "vitepress-plugin-permalink";
 import { teekConfig } from "./teek-config";
 
-const siteName = "庄一帆";
-const siteTitle = "庄一帆 | 前端 · 后端 · 影像 · AIGC";
+const siteName = "金凯";
+const siteTitle = "金凯";
 
 const description = [
   `${siteName}的个人站，记录前端与后端开发实践，展示拍摄、剪辑与 AIGC 影像作品。`,

@@ -15,11 +15,11 @@ export const teekConfig = defineTeekConfig({
   homeCardListPosition: "right",
 
   // 文章默认作者
-  author: { name: "庄一帆", link: "/about" },
+  author: { name: "金凯", link: "/about" },
 
   // 首页左侧个人信息卡片
   blogger: {
-    name: "庄一帆",
+    name: "金凯",
     slogan: "写代码，也拍故事。前端 / 后端 / 影像 / AIGC",
     avatar: "/avatar.svg",
     shape: "circle-rotate",
@@ -35,7 +35,7 @@ export const teekConfig = defineTeekConfig({
 
   // 首页 Banner
   banner: {
-    name: "庄一帆的个人站",
+    name: "金凯的个人站",
     bgStyle: "fullImg",
     imgSrc: ["/blog/bg1.webp", "/blog/bg2.webp", "/blog/bg3.webp"],
     imgWaves: true,
@@ -46,26 +46,6 @@ export const teekConfig = defineTeekConfig({
       "把想法做成产品，把画面剪成作品",
     ],
     descStyle: "types",
-    features: [
-      {
-        title: "前端开发",
-        details: "Vue / VitePress / TypeScript，关注工程化与体验细节。",
-        link: "/tech",
-        image: "/blog/bg1.webp",
-      },
-      {
-        title: "后端开发",
-        details: "接口设计、鉴权、对象存储与媒体处理流水线。",
-        link: "/tech",
-        image: "/blog/bg2.webp",
-      },
-      {
-        title: "影像创作",
-        details: "拍摄、剪辑、调色，也探索 AIGC 影像工作流。",
-        link: "/videos",
-        image: "/blog/bg3.webp",
-      },
-    ],
   },
 
   // 浏览器区域全屏壁纸模式
@@ -80,7 +60,7 @@ export const teekConfig = defineTeekConfig({
     statistics: {
       provider: "busuanzi",
     },
-    appendInfo: [{ key: "author", label: "站主", value: "庄一帆" }],
+    appendInfo: [{ key: "author", label: "站主", value: "金凯" }],
   },
 
   // 文章配置
@@ -109,9 +89,9 @@ export const teekConfig = defineTeekConfig({
 
     return {
       type: "tip",
-      text: `<p>作者：庄一帆</p>
+      text: `<p>作者：金凯</p>
              <p>链接：<a href="${decodeURIComponent(url)}" target="_blank">${decodeURIComponent(url)}</a></p>
-             <p style="margin-bottom: 0">版权：本文版权归庄一帆所有，转载请注明出处。</p>`,
+             <p style="margin-bottom: 0">版权：本文版权归金凯所有，转载请注明出处。</p>`,
     };
   },
 
@@ -158,7 +138,7 @@ export const teekConfig = defineTeekConfig({
     },
     copyright: {
       createYear: 2026,
-      suffix: "庄一帆",
+      suffix: "金凯",
     },
   },
 

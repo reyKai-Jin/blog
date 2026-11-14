@@ -1,6 +1,6 @@
 {
-  "name": "zhuanz-personal-site",
-  "description": "庄一帆的个人站：前端、后端、影像与 AIGC",
+  "name": "jinkai-personal-site",
+  "description": "金凯的个人网站",
   "version": "1.0.0",
   "type": "module",
   "private": true,
