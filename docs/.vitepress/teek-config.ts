@@ -229,6 +229,27 @@ export const teekConfig = defineTeekConfig({
       ignoreIndexMd: true,
       // 所有侧边栏分组默认折叠
       collapsed: true,
+      // 给每个一级分组添加链接
+      // 前端：跳到第一篇 HTML5 文章，后端/运维：跳到栏目页（待有文章后改为第一篇）
+      sidebarResolved: sidebar => {
+        const linkMap: Record<string, string> = {
+          前端: "/tech/html5/semantic-structure",
+          后端: "/tech/backend",
+          运维: "/tech/ops",
+        };
+        // sidebar 是多侧边栏对象，遍历每个路径下的分组
+        Object.keys(sidebar).forEach(path => {
+          const items = sidebar[path];
+          if (Array.isArray(items)) {
+            items.forEach(item => {
+              if (item.text && linkMap[item.text]) {
+                item.link = linkMap[item.text];
+              }
+            });
+          }
+        });
+        return sidebar;
+      },
     },
   },
 });
