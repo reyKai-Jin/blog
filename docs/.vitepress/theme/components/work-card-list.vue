@@ -54,6 +54,22 @@ const items = computed(() =>
   text-decoration: none;
 }
 
+/* 确保封面图区域的链接可点击 */
+.work-card-list :deep(.tk-post-item-card__cover-img a) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.work-card-list :deep(.tk-post-item-card__cover-img img) {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none; /* 让点击事件穿透到 <a> 标签 */
+}
+
 .work-card-list__empty {
   color: var(--vp-c-text-3);
 }
