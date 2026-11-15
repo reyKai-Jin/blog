@@ -232,7 +232,7 @@ export const teekConfig = defineTeekConfig({
       // 给每个一级分组添加链接，指向对应的栏目页
       sidebarResolved: sidebar => {
         const linkMap: Record<string, string> = {
-          前端: "/tech/frontend",
+          前端: "/tech/html5/semantic-structure",
           后端: "/tech/backend",
           运维: "/tech/ops",
         };

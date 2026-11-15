@@ -1,6 +1,6 @@
 ---
 title: 前端
-permalink: /tech/frontend
+permalink: /tech//html5/semantic-structure
 layout: doc
 aside: false
 outline: false
