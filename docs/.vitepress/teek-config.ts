@@ -227,6 +227,8 @@ export const teekConfig = defineTeekConfig({
       resolveRule: "rewrites",
       initItems: false,
       ignoreIndexMd: true,
+      // 所有侧边栏分组默认折叠
+      collapsed: true,
     },
   },
 });
