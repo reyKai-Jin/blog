@@ -86,7 +86,7 @@ export default defineConfig({
         text: "技术文章",
         activeMatch: "/tech",
         items: [
-          { text: "前端", link: "/tech/frontend" },
+          { text: "前端", link: "/tech/html5/semantic-structure" },
           { text: "后端", link: "/tech/backend" },
           { text: "运维", link: "/tech/ops" },
         ],

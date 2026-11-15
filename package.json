@@ -1,6 +1,6 @@
 {
   "name": "jinkai-personal-site",
-  "description": "金凯的个人网站",
+  "description": "金凯的个人博客",
   "version": "1.0.0",
   "type": "module",
   "private": true,
@@ -35,7 +35,9 @@
     "release-as": "standard-version --release-as",
     "release-prerelease": "standard-version --prerelease",
     "cz": "git add . && git-cz",
-    "czp": "git add . && git-cz && git push"
+    "czp": "git add . && git-cz && git push",
+    "deploy": "git add -A && git commit && git push",
+    "deploy:quick": "git add -A && git commit -m 'chore: quick update' && git push"
   },
   "dependencies": {
     "@teek/components": "workspace:*",
